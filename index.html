@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ModernTech | Shop</title>
+    <title>Chic Threads | Premium Fashion</title>
+    <!-- Elegant Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,46 +15,129 @@
     <nav class="navbar">
         <div class="nav-container container">
             <a href="index.html" class="brand">
-                <i class="fas fa-bolt text-primary"></i> ModernTech
+                <i class="fas fa-tshirt"></i> Chic Threads
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Shop</a></li>
-                <li><a href="#">Categories</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="mens.php">Men's</a></li>
+                <li><a href="womens.php">Women's</a></li>
             </ul>
             <div class="nav-cart">
-                <a href="cart.html" class="cart-btn">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">0</span>
+                <a href="cart.php" class="cart-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">Bag</span>
                 </a>
             </div>
         </div>
     </nav>
-
     <main class="container">
-        <section class="hero">
-            <h1>Discover Premium Tech</h1>
-            <p>Enhance your lifestyle with cutting-edge devices designed for the modern world.</p>
+        <section class="hero hero-fashion">
+            <div class="hero-content">
+                <h1>Elevate Your Style</h1>
+                <p>Discover the latest trends in modern fashion and everyday wear.</p>
+            </div>
         </section>
 
-        <h2 class="section-title">Featured Products</h2>
-        <div id="product-grid" class="product-grid">
-            <p class="text-light text-center" style="grid-column: 1 / -1; padding: 3rem;">
-                <i class="fas fa-spinner fa-spin fa-2x mb-3"></i><br>
-                Loading amazing products...
-            </p>
+        <h2 class="section-title">New Arrivals</h2>
+        <div class="product-grid">
+            
+            <article class="card">
+                <a href="product.php?id=1" class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80" alt="Classic White T-Shirt" class="card-img" loading="lazy">
+                </a>
+                <div class="card-body">
+                    <a href="product.php?id=1"><h3 class="card-title">Classic White T-Shirt</h3></a>
+                    <p class="card-price">₹999.00</p>
+                    <form action="cart_action.php" method="POST" class="add-to-cart-form">
+                        <input type="hidden" name="action" value="add">
+                        <input type="hidden" name="product_id" value="1">
+                        <button type="submit" class="btn btn-block"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                    </form>
+                </div>
+            </article>
+
+            <article class="card">
+                <a href="product.php?id=2" class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=800&q=80" alt="Vintage Denim Jacket" class="card-img" loading="lazy">
+                </a>
+                <div class="card-body">
+                    <a href="product.php?id=2"><h3 class="card-title">Vintage Denim Jacket</h3></a>
+                    <p class="card-price">₹3,499.00</p>
+                    <form action="cart_action.php" method="POST" class="add-to-cart-form">
+                        <input type="hidden" name="action" value="add">
+                        <input type="hidden" name="product_id" value="2">
+                        <button type="submit" class="btn btn-block"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                    </form>
+                </div>
+            </article>
+
+            <article class="card">
+                <a href="product.php?id=3" class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80" alt="Black Skinny Jeans" class="card-img" loading="lazy">
+                </a>
+                <div class="card-body">
+                    <a href="product.php?id=3"><h3 class="card-title">Black Skinny Jeans</h3></a>
+                    <p class="card-price">₹2,490.00</p>
+                    <form action="cart_action.php" method="POST" class="add-to-cart-form">
+                        <input type="hidden" name="action" value="add">
+                        <input type="hidden" name="product_id" value="3">
+                        <button type="submit" class="btn btn-block"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                    </form>
+                </div>
+            </article>
+
+            <article class="card">
+                <a href="product.php?id=4" class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=80" alt="Floral Summer Dress" class="card-img" loading="lazy">
+                </a>
+                <div class="card-body">
+                    <a href="product.php?id=4"><h3 class="card-title">Floral Summer Dress</h3></a>
+                    <p class="card-price">₹2,899.00</p>
+                    <form action="cart_action.php" method="POST" class="add-to-cart-form">
+                        <input type="hidden" name="action" value="add">
+                        <input type="hidden" name="product_id" value="4">
+                        <button type="submit" class="btn btn-block"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                    </form>
+                </div>
+            </article>
+
+            <article class="card">
+                <a href="product.php?id=5" class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80" alt="Leather Biker Jacket" class="card-img" loading="lazy">
+                </a>
+                <div class="card-body">
+                    <a href="product.php?id=5"><h3 class="card-title">Leather Biker Jacket</h3></a>
+                    <p class="card-price">₹7,999.00</p>
+                    <form action="cart_action.php" method="POST" class="add-to-cart-form">
+                        <input type="hidden" name="action" value="add">
+                        <input type="hidden" name="product_id" value="5">
+                        <button type="submit" class="btn btn-block"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                    </form>
+                </div>
+            </article>
+
+            <article class="card">
+                <a href="product.php?id=6" class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80" alt="Running Sneakers" class="card-img" loading="lazy">
+                </a>
+                <div class="card-body">
+                    <a href="product.php?id=6"><h3 class="card-title">Running Sneakers</h3></a>
+                    <p class="card-price">₹4,599.00</p>
+                    <form action="cart_action.php" method="POST" class="add-to-cart-form">
+                        <input type="hidden" name="action" value="add">
+                        <input type="hidden" name="product_id" value="6">
+                        <button type="submit" class="btn btn-block"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                    </form>
+                </div>
+            </article>
+
         </div>
     </main>
-
     <footer class="footer">
         <div class="container text-center">
-            <p>&copy; 2026 ModernTech. Built with pure HTML/JS + PHP APIs.</p>
+            <p>&copy; 2026 Chic Threads. Static HTML Interface.</p>
         </div>
     </footer>
-
     <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', loadProducts);
-    </script>
 </body>
 </html>
